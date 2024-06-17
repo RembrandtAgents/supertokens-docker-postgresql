@@ -1,2 +1,4 @@
 apiPassword
 helm-chart/charts
+/helm-chart/.DS_Store
+/.DS_Store
