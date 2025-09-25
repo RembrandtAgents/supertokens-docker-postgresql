@@ -35,11 +35,11 @@ branch_name=${branch_name##refs/heads/}
 
 
 # check if branch is correct based on the version-----------
-if [ $branch_name == "master" ]
+if [ $branch_name == "main" ]
 then
 	YELLOW='\033[1;33m'
 	NC='\033[0m' # No Color
-	printf "${YELLOW}committing to MASTER${NC}\n"
+    printf "${YELLOW}committing to MAIN${NC}\n"
 elif [[ $version == $branch_name* ]]
 then
 	continue=1
@@ -47,7 +47,7 @@ elif ! [[ $branch_name =~ ^[0-9]+.[0-9]+$ ]]
 then
 	YELLOW='\033[1;33m'
 	NC='\033[0m' # No Color
-    printf "${YELLOW}Not committing to master or version branches${NC}\n"
+    printf "${YELLOW}Not committing to main or version branches${NC}\n"
 else
 	RED='\033[0;31m'
 	NC='\033[0m' # No Color

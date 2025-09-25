@@ -52,15 +52,15 @@ then
     if [[ $branch_name == "(unnamed branch)" ]]
     then
         git checkout -b forrelease
-        git merge -s ours master
-        git checkout master
+        git merge -s ours main
+        git checkout main
         git merge forrelease
         git push
         git checkout forrelease
         echo "Done! Please delete this branch"
     else
-        git merge -s ours master
-        git checkout master
+        git merge -s ours main
+        git checkout main
         git merge origin/$branch_name
         git push
         git checkout $branch_name
