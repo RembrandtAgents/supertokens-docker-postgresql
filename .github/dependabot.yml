@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "22:00"
+    open-pull-requests-limit: 1
+    assignees:
+      - "bobvanratingen"
